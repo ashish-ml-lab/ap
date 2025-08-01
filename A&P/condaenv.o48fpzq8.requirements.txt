@@ -1,5 +1,0 @@
-transformers
-torch
-PyMuPDF
-Pillow
-scikit-learn
