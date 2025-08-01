@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Handwriting to Text - A&P</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>✍️ Handwriting to Text</h1>
+    <form action="/handwriting" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Convert</button>
+    </form>
+
+    {% if result %}
+      <div class="output">
+        <h2>Recognized Text:</h2>
+        <p>{{ result }}</p>
+      </div>
+    {% endif %}
+
+    <a href="/" class="back">← Back to Home</a>
+  </div>
+</body>
+</html>
